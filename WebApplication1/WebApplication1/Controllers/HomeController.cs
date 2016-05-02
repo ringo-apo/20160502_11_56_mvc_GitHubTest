@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Kekka(int a)
         {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+            Class1 bbb = new Class1();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.KeisanKekka = bbb.Tasu(a);
 
             return View();
         }
